@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Golden Empire: Social Clicker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="login-overlay" class="overlay">
+        <div class="modal">
+            <h1>Welkom bij Golden Empire</h1>
+            <p>Kies een gebruikersnaam om te starten</p>
+            <input type="text" id="username-input" placeholder="Gebruikersnaam...">
+            <button onclick="login()">Start Game</button>
+        </div>
+    </div>
+
+    <div id="sunburst"></div>
+
+    <div class="container">
+        <aside id="sidebar-left">
+            <h2>Karakters</h2>
+            <div id="character-list" class="shop-grid"></div>
+        </aside>
+
+        <main id="game-area">
+            <div id="stats">
+                <h2 id="display-username">Speler</h2>
+                <h1 id="balance">€0</h1>
+                <p id="cps">Inkomen: €0 /sec</p>
+            </div>
+            
+            <div id="coin-container">
+                <div id="coin">€</div>
+            </div>
+
+            <div id="social-actions">
+                <button onclick="openGiftMenu()">🎁 Geld Sturen</button>
+                <button onclick="claimGiftMenu()">🔓 Code Invoeren</button>
+            </div>
+        </main>
+
+        <aside id="sidebar-right">
+            <h2>Upgrades</h2>
+            <div id="upg-click" class="upgrade-card">
+                <h3>Vinger Kracht</h3>
+                <p id="click-lv">Level 0</p>
+                <p id="click-cost">€10</p>
+            </div>
+            <div id="upg-auto" class="upgrade-card">
+                <h3>Mijnwerker</h3>
+                <p id="auto-lv">Level 0</p>
+                <p id="auto-cost">€50</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="gift-modal" class="overlay hidden">
+        <div class="modal">
+            <h2 id="gift-title">Geld Cadeau</h2>
+            <div id="gift-content"></div>
+            <button onclick="closeModals()">Sluiten</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
